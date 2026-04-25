@@ -9,7 +9,7 @@ group by city_name order by loan_count desc limit 50;
 -- Loan Tape Summary
 select        
         date_trunc(month,date(DISBURSEMENT_DATE)) as month_date,
-        'APR25-Dec25' as PERIOD,
+        'APR25-MAR26' as PERIOD,
         CASE
             WHEN IFNULL(dis.age, 0) < 25 THEN '<25 years'
             WHEN IFNULL(dis.age, 0) >= 25 AND IFNULL(dis.age, 0) <= 35 THEN '25 to 35 Years'
